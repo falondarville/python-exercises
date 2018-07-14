@@ -4,25 +4,89 @@ This is a set of Python exercises used to learn the language. These exercises we
 
 ### List Methods
 
-Append is used to add an item to the end of a list and takes only one argument.
+A list is a Python data structure used to store a collection of items. Lists are ordered, iterable, and indexed. 
 
-Extend is used to add multiple items to the end of a list. Hand items in a list, and the items will be added as individual items. 
+```
+cities = ['Sacramento', 'Rocklin', 'Roseville']
+```
 
-Insert adds an item to the position you give it. This method takes two argument, the first is the index number and the second is the item to be added. 
+**Append** is used to add an item to the end of a list and takes only one argument.
 
-Clear removes all items from a list and takes no arguments.
+```
+cities.append('Oakland')
+```
 
-Pop deletes the last item in a list if you provide it no argument. If you hand the method an argument, it will delete the item at that index.
+**Extend** is used to add multiple items to the end of a list. Hand items in a list, and the items will be added as individual items. 
 
-Remove deletes the first item in a list wherein the value matches what you handed it. If the item is not found in the list, a ValueError will be thrown. This is useful in cases where you don't know the location of an item. 
+```
+cities.extend(['San Francisco', 'Los Angeles', 'Riverside'])
+```
 
-Index returns the index number of the item you are searching for. You can provide one, two, or three arguments to this method. If you provide two argument, the first argument will be searched for and the search will begin at the index position of the second argument. If provided a third argument, this will provide the ending index for the search.
+**Insert** adds an item to the position you give it. This method takes two argument, the first is the index number and the second is the item to be added. 
 
-Count returns the number of times that an item appears in a given list.
+```
+cities.insert(2, 'Lawndale')
+```
 
-Reverse reverses the items in a list. Note that it does not make a duplicate, but replaces the original list. 
+**Clear** removes all items from a list and takes no arguments.
 
-Sort will arrange the items alphabetically. 
+```
+cities.clear()
+```
 
-Join will convert a list to a string. You can specify how you would like the items in the list to be concatenated. 
+**Pop** deletes the last item in a list if you provide it no argument. If you hand the method an argument, it will delete the item at that index.
+
+```
+cities.pop()
+cities.pop(2)
+```
+
+**Remove** deletes the first item in a list wherein the value matches what you handed it. If the item is not found in the list, a ValueError will be thrown. This is useful in cases where you don't know the location of an item. 
+
+```
+cities.remove('Riverside')
+```
+
+**Index** returns the index number of the item you are searching for. You can provide one, two, or three arguments to this method. If you provide two argument, the first argument will be searched for and the search will begin at the index position of the second argument. If provided a third argument, this will provide the ending index for the search.
+
+```
+cities.index('Sacramento', 0, 2)
+```
+
+**Count** returns the number of times that an item appears in a given list.
+
+```
+cities.count('Rocklin')
+```
+
+**Reverse** reverses the items in a list. Note that it does not make a duplicate, but replaces the original list. 
+
+```
+cities.reverse()
+```
+
+**Sort** will arrange the items alphabetically. 
+
+```
+cities.sort()
+```
+
+**Join** will convert a list to a string. You can specify how you would like the items in the list to be concatenated. 
+
+```
+', .join(cities)
+```
+
+### Dictionary Methods
+
+A dictionary contains key value pairs. The keys describe the data and the values represent the data. 
+
+```
+coffeeOrder = {
+	'name': 'Falon',
+	'drink': 'cold brew',
+	'add_on': 'almond milk'
+}
+```
+
 
