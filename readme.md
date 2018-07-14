@@ -1,6 +1,6 @@
-## Python Exercises
+## Python Exercises and Reference Guide
 
-This is a set of Python exercises used to learn the language. These exercises were coded alongside Colt Steele's Python course on Udemy. 
+This is a set of Python exercises used to learn the language. These exercises were coded alongside Colt Steele's Python course on Udemy. All notes are based on the material learned in the course. Please see link at the top of the repo to purchase the course on Udemy. 
 
 ### List Methods
 
@@ -79,7 +79,7 @@ cities.sort()
 
 ### Dictionary Methods
 
-A dictionary contains key value pairs. The keys describe the data and the values represent the data. 
+A dictionary contains key value pairs. The keys describe the data and the values represent the data. Access values in a dictionary using the key. 
 
 ```
 coffeeOrder = {
@@ -87,6 +87,56 @@ coffeeOrder = {
 	'drink': 'cold brew',
 	'add_on': 'almond milk'
 }
+
+coffeeOrders['drink']
 ```
+To access the keys, values, or items (keys and values), use the following built-in functions:
+
+```
+coffeeOrder.values()
+
+coffeeOrder.keys()
+
+coffeeOrder.items()
+```
+**Clear** deletes all the keys and values from a dictionary.
+
+```
+coffeeOrder.clear()
+```
+**Copy** makes a copy of a dictionary. This copy is stored in another part of memory. 
+
+```
+falonCoffeeOrder = coffeeOrder.copy()
+```
+**Fromkeys** is a method called on an empty dictionary that creates key value pairs from comma separated values. The values will all be set as the same. This is used to set default values oftentimes. 
+
+```
+newCoffeeOrder = {}.fromkeys(['name', 'drink', 'add_on'], None)
+```
+**Get**grabs the key in a dictionary. This is a good way to check if a key exists since it doesn't throw an error if the key doesn't exist. Instead, it returns None. Use this in conditional logic. 
+
+```
+coffeeOrder.get('drink')
+```
+
+**Pop** takes a key and deletes the corresponding key value pair. 
+
+```
+coffeeOrder.pop('add_on')
+```
+
+**Popitem** takes no arguments and removes a random key value pair from a dictionary.
+
+```
+coffeeOrder.popitem()
+```
+
+**Update** adds and replaces items in a dictionary.
+
+```
+coffeeOrder.update({'budget': 4.50})
+```
+
 
 
