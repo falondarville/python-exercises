@@ -1,6 +1,6 @@
 ## Python Exercises and Reference Guide
 
-This is a set of Python exercises used to learn the language. These exercises were coded alongside Colt Steele's Python course on Udemy. All notes are based on the material learned in the course. Please see link at the top of the repo to purchase the course on Udemy. 
+This is a set of Python exercises used to learn the language. These exercises were coded alongside [Colt Steele's Python course on Udemy](https://www.udemy.com/the-modern-python3-bootcamp/learn/v4/overview). All notes are based on the material learned in the course. 
 
 ### List Methods
 
