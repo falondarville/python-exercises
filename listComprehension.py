@@ -27,3 +27,12 @@ print(odds)
 # the following is another way to write list comprehension
 [num*2 if num % 2 == 0 else num/2 for num in numbers]
 
+# check for values in common across two lists
+answer = [val for val in [1,2,3,4] if val in [3,4,5,6]]
+
+# make items in list lowercase and reverse them
+answer2 = [val[::-1].lower() for val in ["Elie", "Tim", "Matt"]]
+
+# print a string as a list, after taking out the vowels
+answer3 = [char for char in "amazing" if char not in "aeiou"] 
+
