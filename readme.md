@@ -16,7 +16,7 @@ cities = ['Sacramento', 'Rocklin', 'Roseville']
 cities.append('Oakland')
 ```
 
-**Extend** is used to add multiple items to the end of a list. Hand items in a list, and the items will be added as individual items. 
+**Extend** is used to add multiple items to the end of a list. It takes a list as an argument, adding the items individually. 
 
 ```
 cities.extend(['San Francisco', 'Los Angeles', 'Riverside'])
