@@ -34,3 +34,21 @@ def greeting(**kwargs):
 # note that the code is only looking for "Falon", so it doesn't matter if I pass more than one key value pair in these. 
 print(greeting(Falon="special"))
 print(greeting(Bob="hello"))
+
+# DICTIONARY UNPACKING
+# if you try to pass just the variable name for the dictionary to the display_names function, it will tell you that there is a second argument missing. 
+# Add ** to unpack dictionary
+def display_names(first, second):
+	print(f"{first} says hello to {second}")
+
+names = {"first": "Colt", "second": "Rusty"}
+
+display_names(**names)
+
+# another example of dictionary unpacking wherein the arguments are originally set as variables, and changed to a dictionary later. Use ** because the data's form is a dictionary. 
+def add_and_multiply_numbers(a, b, c):
+	print(a + b *c)
+
+data = dict(a=1, b=2, c=3)
+
+add_and_multiply_numbers(**data)
