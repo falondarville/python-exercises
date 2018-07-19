@@ -16,13 +16,13 @@ cities = ['Sacramento', 'Rocklin', 'Roseville']
 cities.append('Oakland')
 ```
 
-**Extend** is used to add multiple items to the end of a list. Hand items in a list, and the items will be added as individual items. 
+**Extend** is used to add multiple items to the end of a list. It takes a list as an argument, adding the items individually. 
 
 ```
 cities.extend(['San Francisco', 'Los Angeles', 'Riverside'])
 ```
 
-**Insert** adds an item to the position you give it. This method takes two argument, the first is the index number and the second is the item to be added. 
+**Insert** adds an item to the position you give it. This method takes two arguments; the first is the index number and the second is the item to be added. 
 
 ```
 cities.insert(2, 'Lawndale')
@@ -47,7 +47,7 @@ cities.pop(2)
 cities.remove('Riverside')
 ```
 
-**Index** returns the index number of the item you are searching for. You can provide one, two, or three arguments to this method. If you provide two argument, the first argument will be searched for and the search will begin at the index position of the second argument. If provided a third argument, this will provide the ending index for the search.
+**Index** returns the index number of the item you are searching for. You can provide one, two, or three arguments to this method. If you provide two arguments, the first argument will be searched for and the search will begin at the index position of the second argument. If provided a third argument, this will provide the ending index for the search.
 
 ```
 cities.index('Sacramento', 0, 2)
