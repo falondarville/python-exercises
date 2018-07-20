@@ -18,9 +18,9 @@ for num in doubles:
 
 people = ["Falon", "Marie", "Sally", "Martha"]
 
-persons = map(lambda name: name.upper(), people)
+persons = list(map(lambda name: name.upper(), people))
 
-print(list(persons))
+print(persons)
 
 # example of lambda used on dictionary
 coffee = [
@@ -32,3 +32,12 @@ coffee = [
 coffee_taste = list(map(lambda x: x['taste'], coffee))
 
 print(coffee_taste)
+
+# You can also pass the name of a function directly into map without using a lambda. 
+def double(x): return x*2
+
+doubled = list(map(double, nums))
+
+print(doubled)
+
+# The benefit of using a lambda is that you're writing all of the code on a single line. 
