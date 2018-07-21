@@ -18,4 +18,10 @@ grades = [{"name": "Falon", "grade": 70}, {"name": "Marie", "grade": 45}, {"name
 
 passing_grades = list(map(lambda x: x["name"],filter(lambda grade: grade["grade"] >= 70, grades)))
 
+# the previous can be written as a list comprehension, which is preferred in Python
+comp_passing_grades = [name["name"] for name in grades if name["grade"] >= 70]
+
 print(passing_grades)
+print(comp_passing_grades)
+
+# If you can use list comprehension, use it. Map and filter may not be used as much. 
