@@ -11,7 +11,7 @@ print("What color would you like to say it in?")
 color = input()
 
 if color not in valid_colors:
-	color = "blue"
+    color = "blue"
 
 f = Figlet(font="big")
 input_saying = f.renderText(saying)
