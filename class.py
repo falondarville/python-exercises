@@ -6,10 +6,19 @@
 # variables and methods starting with two underscores are not conventional and will not run. Behind the scenes, Python is name mangling these variables and methods, so they are not accessible by the name you gave them. Instead they will look like: _className__variable/methodName
 # don't define your own dunder variables __example__
 class User:
+	# define a class variable
+	active_users = 0
+
 	def __init__(self, first, last, age):
 		self.first = first
 		self.last = last
 		self.age = age
+		# each time an instance of User is created, add one to active_users
+		User.active_users += 1
+
+	def logout(self):
+		User.active_users -= 1
+		return f"{self.first} has logged out"
 
 	def full_name(self):
 		return f"{self.first} {self.last}"
@@ -38,4 +47,9 @@ print(user1.initials())
 print(user1.likes("candy"))
 print(user1.is_senior())
 print(user1.birthday())
+
+# when accessing a class variable, identify the class name first
+print(User.active_users)
+
+print(user2.logout())
 
