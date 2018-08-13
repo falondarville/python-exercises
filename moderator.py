@@ -1,3 +1,5 @@
+# this is an example of class inheritance
+
 class User:
 
 	active_users = 0
@@ -39,6 +41,7 @@ class User:
 		return f"Happy {self.age}th birthday, {self.first}"
 
 # modeled after a website like Reddit, where you can be a user with moderator priviledges. Moderator inherits all of the functions that User has. 
+# note that multiple inheritance is not often used, but worth knowing about
 class Moderator(User):
 	def __init__(self, first, last, age, community):
 		super().__init__(first, last, age)
