@@ -1,3 +1,6 @@
+# copy is a built in module that creates new copies. This is used in the following __mul__ method. Without it, you are not creating space for new copies
+from copy import copy
+
 class Human:
 	def __init__(self, first, last, age):
 		self.first = first
@@ -24,7 +27,7 @@ class Human:
 	def __mul__(self, other):
 		# check that the second argument passing is an integer
 		if isinstance(other, int):
-			return [self for i in range(other)]
+			return [copy(self) for i in range(other)]
 		# normally you would raise a typeerror here
 		return "You are cloning humans"
 
@@ -34,4 +37,9 @@ print(j)
 print(len(j))
 
 print(j + k)
-print(j * 2)
+
+# change the name of the second clone to "John"
+twins = j * 2
+twins[1].first = "John"
+print(twins)
+
