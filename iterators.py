@@ -20,3 +20,25 @@ def square(x):
 		
 my_for("hello", print)
 my_for([1, 2, 3, 4, 5], square)
+
+
+# writing a custom iterator
+class Counter:
+	def __init__(self, low, high):
+		self.current = low
+		self.high = high
+
+	# this needs to return an iterator
+	def __iter__(self):
+		return self
+
+	def __next__(self):
+		if self.current < self.high:
+			num = self.current
+			self.current += 1
+			return num
+		raise StopIteration
+
+for x in Counter(0, 10):
+	print(x)
+
