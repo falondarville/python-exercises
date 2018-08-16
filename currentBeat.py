@@ -12,3 +12,15 @@ def current_beat():
 	return result
 
 print(current_beat())
+
+# you can do the above with an infinite generator instead!
+def current_beat():
+	nums = (1, 2, 3, 4)
+	i = 0
+	while True:
+		if i >= len(nums): i = 0
+		yield nums[i]
+		i += 1
+
+counter = current_beat()
+next(counter)
